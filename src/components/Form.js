@@ -1,5 +1,7 @@
-import React from 'react'
-import useInput from '../hooks/useInput'
+import React from 'react';
+import useInput from '../hooks/useInput';
+import './design.scss';
+
 
 function Form() {
 
@@ -23,7 +25,7 @@ function Form() {
         resetFromPlace()
         resetToPlace()
     }
-    
+
     const hasNumber = (myString) => {
         return /\d/.test(myString);
     }
@@ -31,23 +33,24 @@ function Form() {
     return (
         <div>
             <form onSubmit={submitHandler}>
-                <div>
-                    <label></label>
-                    <input
-                      placeholder="Going From"
-                      {...bindFromPlace}
-                      type="text"
-                      />
+                <div className="segment">
+                    <h1>FlightSharp</h1>
                 </div>
-                <div>
-                <label></label>
+                <label>
                     <input
-                      placeholder="Destination"
-                      {...bindToPlace}
-                      type="text"
-                      />
-                </div>
-                <button>Search flights</button>
+                    placeholder="Going From"
+                    {...bindFromPlace}
+                    type="text"
+                    />
+                </label>
+                <label>
+                    <input
+                    placeholder="Destination"
+                    {...bindToPlace}
+                    type="text"
+                    />
+                </label>
+                <button>Search</button>
             </form>
         </div>
     )
