@@ -3,7 +3,7 @@ import useInput from '../hooks/useInput';
 import './design.scss';
 
 
-function Form() {
+const Form = (props) => {
 
     const [fromPlace, bindFromPlace, resetFromPlace] = useInput('')
     const [toPlace, bindToPlace, resetToPlace] = useInput('')

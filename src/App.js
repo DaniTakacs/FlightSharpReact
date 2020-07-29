@@ -6,10 +6,11 @@ import axios from "axios";
 const App = (props) => {
   const [State, SetAppState] = useState({
     accessToken: "237f37871102101c4ec439ba6c98520e",
-    filteredFlights: {},  
+    defaultCurrency: "HUF",
+    filteredFlights: {},    
   });
 
-  useEffect(()=>{getFlights("BUD", "BER", "HUF")},[])
+  useEffect(()=>{},[])
 
   let content;
 
@@ -41,7 +42,7 @@ const App = (props) => {
   };
 
   return <div className="App">
-    <div><Form></Form></div>
+    <div><Form click={getFlights}></Form></div>
       <div>{content}</div>
   </div>;
 };
