@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import Form from './components/Form';
+import FlightList from './components/FlightList';
 import axios from "axios";
 
 const App = (props) => {
@@ -42,6 +43,7 @@ const App = (props) => {
 
   return <div className="App">
     <div><Form></Form></div>
+     <FlightList></FlightList>
       <div>{content}</div>
   </div>;
 };
