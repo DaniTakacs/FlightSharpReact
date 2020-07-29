@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
+import Form from './components/Form';
 import axios from "axios";
 
 const App = (props) => {
@@ -39,7 +40,10 @@ const App = (props) => {
         })
   };
 
-  return <div className="App">{content}</div>;
+  return <div className="App">
+    <div><Form></Form></div>
+      <div>{content}</div>
+  </div>;
 };
 
-export default App;
+export default App
