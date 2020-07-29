@@ -18,7 +18,9 @@ function FlightList() {
     ]
     const flightList = flights.map(flight => (<Flight key={flight.flNum} flight={flight}></Flight>))
 
-    return <div>{flightList}</div>
+    return <div>
+                <ul>{flightList}</ul>
+            </div>
 }
 
 export default FlightList

@@ -123,3 +123,63 @@ button {
     flex: 1;
   }
 }
+
+ul
+{
+    position: center;
+    width: 600px;
+    margin: 100px auto 0;
+    padding: 10px;
+    box-sizing: border-box;
+    background: rgba(255,255,255,.4);
+    box-shadow: inset 0 0 15px rgba(255,255,255,.1);
+    border-radius: 5px;
+}
+ul li 
+{
+    display: flex;
+    background: rgba(255,255,255,.1);
+    padding: 10px, 20px;
+    color: rgba(0, 181, 204, 1);
+    margin: 5px 0;
+    transition: .5s;
+}
+
+ul li:nth-child(1)
+{
+    background: rgba(255,255,255,.6);
+}
+
+ul li:nth-child(2)
+{
+    background: rgba(255,255,255,.4);
+}
+ul li:nth-child(3)
+{
+    background: rgba(255,255,255,.2);
+}
+ul li span:nth-child(1)
+{
+    width: 100px;
+}
+ul li span:nth-child(2)
+{
+    width: 100px;
+}
+ul li span:nth-child(3)
+{
+    width: 100px;
+}
+ul li span:nth-child(4)
+{
+    width: 140px;
+}
+ul li span:nth-child(5)
+{
+    width: 50px;
+}
+ul li:hover
+{
+    transform: scale(1.06);
+    background: #ebecf0;
+}
