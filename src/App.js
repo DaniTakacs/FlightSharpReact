@@ -7,6 +7,10 @@ const App = (props) => {
 
   let content;
 
+  const getFlights = (from, to, currency) => {
+    axios.get("");
+  };
+
   return <div className="App">{content}</div>;
 };
 
