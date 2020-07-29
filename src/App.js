@@ -32,7 +32,6 @@ const App = (props) => {
         })
         .then((response)=>{
           const respFlights = response.data.data[`${to}`];
-          console.log(respFlights)
           SetAppState({...State, filteredFlights:respFlights})
         })
         .catch((error)=>{
