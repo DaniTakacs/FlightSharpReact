@@ -127,7 +127,7 @@ button {
 ul
 {
     position: center;
-    width: 600px;
+    width: 60%;
     margin: 100px auto 0;
     padding: 10px;
     box-sizing: border-box;
@@ -160,22 +160,23 @@ ul li:nth-child(3)
 }
 ul li span:nth-child(1)
 {
-    width: 100px;
+    width: 400px;
 }
 ul li span:nth-child(2)
 {
-    width: 100px;
+    width: 200px;
 }
 ul li span:nth-child(3)
 {
-    width: 100px;
+    width: 200px;
 }
 ul li span:nth-child(4)
 {
-    width: 140px;
+    width: 210px;
 }
 ul li span:nth-child(5)
 {
+    padding-top: 22px;
     width: 50px;
 }
 ul li:hover

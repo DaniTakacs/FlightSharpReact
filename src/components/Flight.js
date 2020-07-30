@@ -9,10 +9,10 @@ const Flight = (props) => {
       </span>
 
       <span className="from">
-        <h1>{props.from}</h1>
+        <h1>From: {props.from}</h1>
       </span>
       <span className="toDes">
-        <h1>{props.to}</h1>
+        <h1>To: {props.to}</h1>
       </span>
       <span className="price">
         <h1>{props.flight.price} HUF</h1>

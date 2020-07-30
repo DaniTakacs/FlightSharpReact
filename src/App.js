@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import Form from "./Components/Form";
-import FlightList from "./Components/FlightList";
+import Form from "./components/Form";
+import FlightList from "./components/FlightList";
 import axios from "axios";
 
 const App = (props) => {
