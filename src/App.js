@@ -12,9 +12,7 @@ const App = (props) => {
     to: "",
   });
 
-  useEffect(() => {
-    getFlights("BUD", "BER", "HUF");
-  }, []);
+  useEffect(() => {}, []);
 
   let content;
 
