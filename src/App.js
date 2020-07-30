@@ -12,10 +12,6 @@ const App = (props) => {
     to: "",
   });
 
-  useEffect(() => {}, []);
-
-  let content;
-
   const getFlights = (from, to, currency) => {
     const axios = require("axios");
     axios({
@@ -63,7 +59,6 @@ const App = (props) => {
         from={State.from}
         to={State.to}
       ></FlightList>
-      <div>{content}</div>
     </div>
   );
 };

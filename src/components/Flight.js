@@ -17,9 +17,7 @@ const Flight = (props) => {
       <span className="price">
         <h1>{props.flight.price} HUF</h1>
       </span>
-      <span className="badge">
-        <i className="fa fa-plane" aria-hidden="true"></i>
-      </span>
+      <span className="badge">✈️</span>
     </li>
   );
 };
