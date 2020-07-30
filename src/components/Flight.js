@@ -5,7 +5,7 @@ const Flight = (props) => {
   return (
     <li>
       <span className="flNum">
-        <h1>Flight Number: {props.flight.flight_number}</h1>
+        <h1>Flight Num: {props.flight.flight_number}</h1>
       </span>
 
       <span className="from">
@@ -17,7 +17,12 @@ const Flight = (props) => {
       <span className="price">
         <h1>{props.flight.price} HUF</h1>
       </span>
-      <span className="badge">✈️</span>
+      <span >
+        <h1>Airline: {props.flight.airline}</h1>
+      </span>
+      <span >
+        <h1>✈️</h1>
+      </span>
     </li>
   );
 };
