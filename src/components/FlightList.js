@@ -1,26 +1,17 @@
-import React from 'react';
-import Flight from './Flight';
+import React from "react";
+import Flight from "./Flight";
 
-function FlightList() {
-    const flights = [
-        {
-            from: 'BER',
-            to: 'WAW',
-            price: '30 000 Ft',
-            flNum: 'kekw'
-        },
-        {
-            from: 'BUD',
-            to: 'WAW',
-            price: '25 000 Ft',
-            flNum: 'yolo'
-        }
-    ]
-    const flightList = flights.map(flight => (<Flight key={flight.flNum} flight={flight}></Flight>))
+const FlightList = (props) => {
+  const flights = props.flights;
+  return (
+    <div>
+      <ul>
+        {Object.values(flights).map((flight) => (
+          <Flight flight={flight} from={props.from} to={props.to}></Flight>
+        ))}
+      </ul>
+    </div>
+  );
+};
 
-    return <div>
-                <ul>{flightList}</ul>
-            </div>
-}
-
-export default FlightList
+export default FlightList;

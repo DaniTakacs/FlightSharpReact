@@ -14,8 +14,7 @@ const Form = (props) => {
     const toCharsOnly = !hasNumber(toPlace);
 
     if (validFromLength && validToLength && fromCharsOnly && toCharsOnly) {
-      props.click(fromPlace, toPlace, "HUF");
-      console.log(props);
+      props.click(fromPlace.toUpperCase(), toPlace.toUpperCase(), "HUF");
     } else {
       alert(
         "Start end Destination must be 3 chars long and can not contain numbers"

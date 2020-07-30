@@ -1,31 +1,27 @@
-import React from 'react';
+import React from "react";
 
-function Flight({flight}) {
-    return (
-        <li>
-            <span className="from">
-                <h1>
-                    {flight.from}
-                </h1>
-                </span>
-            <span className="to">
-                <h1>
-                    {flight.to}
-                </h1>
-                </span>
-            <span className="flNum">
-                <h1>
-                    {flight.flNum}
-                </h1>
-                </span>
-            <span className="price">
-                <h1>
-                    {flight.price}
-                </h1>
-                </span>
-            <span className="badge"><i className="fa fa-plane" aria-hidden="true"></i></span>
-        </li>
-    )
-}
+const Flight = (props) => {
+  console.log(props);
+  return (
+    <li>
+      <span className="flNum">
+        <h1>Flight Number: {props.flight.flight_number}</h1>
+      </span>
 
-export default Flight
+      <span className="from">
+        <h1>{props.from}</h1>
+      </span>
+      <span className="toDes">
+        <h1>{props.to}</h1>
+      </span>
+      <span className="price">
+        <h1>{props.flight.price} HUF</h1>
+      </span>
+      <span className="badge">
+        <i className="fa fa-plane" aria-hidden="true"></i>
+      </span>
+    </li>
+  );
+};
+
+export default Flight;

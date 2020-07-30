@@ -8,9 +8,13 @@ const App = (props) => {
   const [State, SetAppState] = useState({
     accessToken: "237f37871102101c4ec439ba6c98520e",
     filteredFlights: {},
+    from: "",
+    to: "",
   });
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    getFlights("BUD", "BER", "HUF");
+  }, []);
 
   let content;
 
@@ -37,7 +41,12 @@ const App = (props) => {
     })
       .then((response) => {
         const respFlights = response.data.data[`${to}`];
-        SetAppState({ ...State, filteredFlights: respFlights });
+        SetAppState({
+          ...State,
+          filteredFlights: respFlights,
+          from: from,
+          to: to,
+        });
       })
       .catch((error) => {
         console.log(error);
@@ -51,7 +60,11 @@ const App = (props) => {
           click={(from, to, currency) => getFlights(from, to, currency)}
         ></Form>
       </div>
-      <FlightList></FlightList>
+      <FlightList
+        flights={State.filteredFlights}
+        from={State.from}
+        to={State.to}
+      ></FlightList>
       <div>{content}</div>
     </div>
   );
